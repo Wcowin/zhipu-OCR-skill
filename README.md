@@ -13,20 +13,30 @@
 
 ## 安装
 
-### 1. 克隆仓库
+### 方式一：AI 自动安装（推荐）
+
+直接复制以下 prompt 发送给 AI：
+
+```
+请帮我安装 ocr skill，从 https://github.com/Wcowin/zhipu-OCR-skill 克隆到本地的 skills 目录，然后安装依赖。
+```
+
+AI 会自动执行：
+```bash
+git clone https://github.com/Wcowin/zhipu-OCR-skill.git
+cd zhipu-OCR-skill
+pip install -r requirements.txt
+```
+
+### 方式二：手动安装
 
 ```bash
 git clone https://github.com/Wcowin/zhipu-OCR-skill.git
 cd zhipu-OCR-skill
-```
-
-### 2. 安装依赖
-
-```bash
 pip install -r requirements.txt
 ```
 
-### 3. 配置 API Key
+## 配置 API Key
 
 ```bash
 # 方式1：环境变量（推荐）
@@ -73,31 +83,6 @@ for path, text in results.items():
 ```
 
 ### 作为 Agent Skill 使用
-
-#### 方式一：AI 自动安装（推荐）
-
-直接复制以下 prompt 发送给 AI：
-
-```
-请帮我安装 ocr skill，从 https://github.com/Wcowin/zhipu-OCR-skill 克隆到本地的 skills 目录，然后安装依赖。
-```
-
-AI 会自动执行：
-```bash
-git clone https://github.com/Wcowin/zhipu-OCR-skill.git
-cd zhipu-OCR-skill
-pip install -r requirements.txt
-```
-
-#### 方式二：手动安装
-
-```bash
-git clone https://github.com/Wcowin/zhipu-OCR-skill.git
-cd zhipu-OCR-skill
-pip install -r requirements.txt
-```
-
-#### 使用方法
 
 安装完成后，发送图片并说"识别文字"即可。
 
